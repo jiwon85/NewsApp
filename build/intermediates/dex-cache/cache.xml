@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/jiwon_85/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-2c5e5e4bcf7aedafaa599579c77b02dcd44c3709.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/.gradle/caches/modules-2/files-2.1/com.parse/parse-android/1.10.3/36366e460af2c0f224bb8f70b64e3302f638b138/parse-android-1.10.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="36366e460af2c0f224bb8f70b64e3302f638b138">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/parse-android-1.10.3-8928a667700668aa4dbb4672dfff9cd387740826.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-1d2ccdca1b7430db6696469e9b96d630e47735a9.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-d3bae4897f196fec319dbf7edfb7ac60dc8356bd.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.1/44780c2cf98f6a3cf4e77f1234d644758b329201/bolts-android-1.2.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="44780c2cf98f6a3cf4e77f1234d644758b329201">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.1-f44dedce0b559f568fcd0181de223ff97a57fa5f.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-9b150af8b2acffd8c11eb993d38e4be80cbbc3f8.jar" />
+    </item>
+
+</items>
