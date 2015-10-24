@@ -24,6 +24,14 @@
             android:name=".CreateAccountActivity"
             android:label="@string/title_activity_create_account" >
         </activity>
+        <activity
+            android:name=".NewsListActivity"
+            android:label="@string/title_activity_news_list" >
+        </activity>
+        <activity
+            android:name=".CreateContentActivity"
+            android:label="@string/title_activity_create_content" >
+        </activity>
     </application>
 
 </manifest>
