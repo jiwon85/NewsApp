@@ -13,10 +13,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/createUsernameText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="158dp"
+        android:layout_marginTop="150dp"
         android:hint="Username"
-        android:width="@dimen/dialog_fixed_width_minor"
-        android:textAlignment="center" />
+        android:width="320dp"
+        android:textAlignment="center"
+        android:inputType="textEmailSubject" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -26,23 +27,25 @@
         android:id="@+id/createPasswordText"
         android:hint="Password"
         android:textAlignment="center"
-        android:width="@dimen/dialog_fixed_width_minor"
-        android:layout_marginTop="35dp"
+        android:width="320dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@+id/createUsernameText"
-        android:layout_alignStart="@+id/createUsernameText" />
+        android:layout_alignStart="@id/createUsernameText"
+        android:layout_alignLeft="@id/createUsernameText"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/createEmailText"
         android:hint="Email"
         android:textAlignment="center"
-        android:width="@dimen/dialog_fixed_width_minor"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/confirmPasswordText"
-        android:layout_alignStart="@+id/confirmPasswordText" />
+        android:width="320dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/confirmPasswordText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -60,7 +63,7 @@
         android:id="@+id/createButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="69dp" />
+        android:layout_marginBottom="60dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -70,8 +73,8 @@
         android:id="@+id/confirmPasswordText"
         android:hint="Confirm Password"
         android:textAlignment="center"
-        android:width="@dimen/dialog_fixed_width_minor"
-        android:layout_marginTop="41dp"
+        android:width="320dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@+id/createPasswordText"
         android:layout_centerHorizontal="true" />
 

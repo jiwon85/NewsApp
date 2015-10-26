@@ -89,9 +89,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                         if (user != null) {
                             Toast t = Toast.makeText(getApplicationContext(), "success!", Toast.LENGTH_SHORT);
                             t.show();
-                            //TODO: go to next screen
+                            Intent i = new Intent(getApplicationContext(), NewsListActivity.class);
+                            startActivity(i);
                         } else {
                             // Signup failed. Look at the ParseException to see what happened.
+                            Toast t = Toast.makeText(getApplicationContext(), e.getMessage() , Toast.LENGTH_SHORT);
+                            t.show();
                         }
                     }
                 });

@@ -10,16 +10,16 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/articleLinkText"
         android:layout_marginTop="103dp"
-        android:lines="2"
+        android:lines="1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:width="@dimen/dialog_fixed_width_minor"
+        android:width="320dp"
         android:hint="Link to Article"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:inputType="textEmailSubject" />
 
     <ListView
         android:layout_width="wrap_content"
@@ -57,7 +57,8 @@
         android:nestedScrollingEnabled="true"
         android:choiceMode="multipleChoice"
         android:layout_below="@+id/locationLabel"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"/>
 
     <Button
         android:layout_width="wrap_content"

@@ -87,10 +87,11 @@ public class CreateAccountActivity extends ActionBarActivity implements View.OnC
                         // Hooray! Let them use the app now.
                         Toast t = Toast.makeText(getApplicationContext(), "success!", Toast.LENGTH_SHORT);
                         t.show();
-                        //TODO: move to next screen
+                        Intent i = new Intent(getApplicationContext(), NewsListActivity.class);
+                        startActivity(i);
                     } else {
-                        // Sign up didn't succeed. Look at the ParseException
-                        // to figure out what went wrong
+                        Toast t = Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT);
+                        t.show();
 
                     }
                 }
