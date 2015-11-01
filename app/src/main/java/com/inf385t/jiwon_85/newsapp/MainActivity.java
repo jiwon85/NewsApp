@@ -81,6 +81,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     }
 
     public void onClick(View v) {
+        //TODO: avoid user logging in every time the app is opened
         switch(v.getId()) {
             case R.id.loginButton:
                 ParseUser.logInInBackground(usernameText.getText().toString(),

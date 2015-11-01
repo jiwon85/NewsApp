@@ -16,4 +16,13 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:paddingTop="130dp"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

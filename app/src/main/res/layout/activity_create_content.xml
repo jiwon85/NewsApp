@@ -19,7 +19,8 @@
         android:width="320dp"
         android:hint="Link to Article"
         android:textAlignment="center"
-        android:inputType="textEmailSubject" />
+        android:imeOptions="actionDone"
+        android:inputType="textUri" />
 
     <ListView
         android:layout_width="wrap_content"

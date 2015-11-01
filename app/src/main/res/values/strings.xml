@@ -4,4 +4,15 @@
     <string name="title_activity_create_account">CreateAccountActivity</string>
     <string name="title_activity_news_list">NewsListActivity</string>
     <string name="title_activity_create_content">CreateContentActivity</string>
+
+    <string-array name="news_categories">
+        <item>Politics</item>
+        <item>Business</item>
+        <item>Tech</item>
+        <item>Entertainment</item>
+        <item>Sports</item>
+        <item>Science</item>
+        <item>Health</item>
+        <item>Other</item>
+    </string-array>
 </resources>

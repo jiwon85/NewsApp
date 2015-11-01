@@ -23,5 +23,6 @@ public class NewsListActivity extends ActionBarActivity {
             }
         });
     }
+    //TODO: Parse queries for list: custom adapter and listview?
 
 }
