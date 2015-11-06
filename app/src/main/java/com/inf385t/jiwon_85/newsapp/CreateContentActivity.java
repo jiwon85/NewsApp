@@ -60,7 +60,7 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
                 SparseBooleanArray checkedCategories = categoryView.getCheckedItemPositions();
                 ParseObject post = new ParseObject("post");
                 String link = articleLinkText.getText().toString();
-                new MyTask().execute(link);
+//                new MyTask().execute(link);
                 post.add("link", link);
                 //Politics, Business, Tech, Entertainment, Sports, Science, Health, Other
                 post.add("isPolitics", checkedCategories.valueAt(0));
@@ -90,35 +90,35 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
 
 
     }
-    private class MyTask extends AsyncTask<String, Void, String> {
-        ProgressDialog prog;
-        String title = "";
-
-        @Override
-        protected void onPreExecute() {
-            prog = new ProgressDialog(CreateContentActivity.this);
-            prog.setMessage("Loading....");
-            prog.show();
-        }
-        @Override
-        protected String doInBackground(String... params) {
-            try {
-                Document doc = Jsoup.connect(params[0]).get(); //TODO: import jsoup
-                title = doc.title();
-            } catch (IOException e) {
-                e.printStackTrace();
-                //TODO: toast error, ask to fix url
-            }
-            return title;
-        }
-        @Override
-        protected void onPostExecute(String result) {
-            super.onPostExecute(result);
-            prog.dismiss();
-            urlTitle = result;
-        }
-
-    }
+//    private class MyTask extends AsyncTask<String, Void, String> {
+//        ProgressDialog prog;
+//        String title = "";
+//
+//        @Override
+//        protected void onPreExecute() {
+//            prog = new ProgressDialog(CreateContentActivity.this);
+//            prog.setMessage("Loading....");
+//            prog.show();
+//        }
+//        @Override
+//        protected String doInBackground(String... params) {
+//            try {
+//                Document doc = Jsoup.connect(params[0]).get(); //TODO: import jsoup
+//                title = doc.title();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//                //TODO: toast error, ask to fix url
+//            }
+//            return title;
+//        }
+//        @Override
+//        protected void onPostExecute(String result) {
+//            super.onPostExecute(result);
+//            prog.dismiss();
+//            urlTitle = result;
+//        }
+//
+//    }
 
 
 }
