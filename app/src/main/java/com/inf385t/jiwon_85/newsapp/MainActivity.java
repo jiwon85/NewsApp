@@ -29,41 +29,38 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Parse.initialize(this, getString(R.string.parseappid), getString(R.string.parseclientkey));
-        if(ParseUser.getCurrentUser() == null) {
-
-
-            usernameText = (EditText) findViewById(R.id.usernameText);
-            passwordText = (EditText) findViewById(R.id.passwordText);
-            loginButton = (Button) findViewById(R.id.loginButton);
-            loginButton.setOnClickListener(this);
-            loginButton.setClickable(false);
-            createAccountButton = (Button) findViewById(R.id.createAccountButton);
-            createAccountButton.setOnClickListener(this);
-            TextWatcher textWatcher = new TextWatcher() {
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    if (usernameText.getText().length() != 0 && passwordText.getText().length() != 0) {
-                        loginButton.setClickable(true);
-                    } else {
-                        loginButton.setClickable(false);
-                    }
-                }
-
-                @Override
-                public void afterTextChanged(Editable s) {
-                }
-
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                }
-            };
-            usernameText.addTextChangedListener(textWatcher);
-            passwordText.addTextChangedListener(textWatcher);
-        } else {
+        if(ParseUser.getCurrentUser() != null) {
             Intent i = new Intent(getApplicationContext(), NewsListActivity.class);
             startActivity(i);
         }
+        usernameText = (EditText) findViewById(R.id.usernameText);
+        passwordText = (EditText) findViewById(R.id.passwordText);
+        loginButton = (Button) findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(this);
+        loginButton.setClickable(false);
+        createAccountButton = (Button) findViewById(R.id.createAccountButton);
+        createAccountButton.setOnClickListener(this);
+        TextWatcher textWatcher = new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (usernameText.getText().length() != 0 && passwordText.getText().length() != 0) {
+                    loginButton.setClickable(true);
+                } else {
+                    loginButton.setClickable(false);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+        };
+        usernameText.addTextChangedListener(textWatcher);
+        passwordText.addTextChangedListener(textWatcher);
+
 
 
     }
@@ -117,6 +114,15 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 i.putExtra("username", usernameText.getText().toString());
                 startActivity(i);
                 break;
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(ParseUser.getCurrentUser() != null) {
+            Intent i = new Intent(getApplicationContext(), NewsListActivity.class);
+            startActivity(i);
         }
     }
 }

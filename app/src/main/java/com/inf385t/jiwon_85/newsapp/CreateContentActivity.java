@@ -1,6 +1,6 @@
 package com.inf385t.jiwon_85.newsapp;
 
-import android.app.ProgressDialog;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -16,7 +16,11 @@ import com.parse.Parse;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 import java.io.IOException;
+import java.util.concurrent.CountDownLatch;
 
 public class CreateContentActivity extends ActionBarActivity implements View.OnClickListener {
 
@@ -25,6 +29,7 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
     private ListView categoryView;
     private ListView placeView;
     private String urlTitle = "";
+    private CountDownLatch latch = new CountDownLatch(1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,26 +65,36 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
                 SparseBooleanArray checkedCategories = categoryView.getCheckedItemPositions();
                 ParseObject post = new ParseObject("post");
                 String link = articleLinkText.getText().toString();
-//                new MyTask().execute(link);
-                post.add("link", link);
+//
+
+                new MyTask().execute(link);
+                post.put("link", link);
                 //Politics, Business, Tech, Entertainment, Sports, Science, Health, Other
-                post.add("isPolitics", checkedCategories.valueAt(0));
-                post.add("isBusiness", checkedCategories.valueAt(1));
-                post.add("isTech", checkedCategories.valueAt(2));
-                post.add("isEntertainment", checkedCategories.valueAt(3));
-                post.add("isSports", checkedCategories.valueAt(4));
-                post.add("isScience", checkedCategories.valueAt(5));
-                post.add("isHealth", checkedCategories.valueAt(6));
-                post.add("isOther", checkedCategories.valueAt(7));
+                post.put("isPolitics", checkedCategories.valueAt(0));
+                post.put("isBusiness", checkedCategories.valueAt(1));
+                post.put("isTech", checkedCategories.valueAt(2));
+                post.put("isEntertainment", checkedCategories.valueAt(3));
+                post.put("isSports", checkedCategories.valueAt(4));
+                post.put("isScience", checkedCategories.valueAt(5));
+                post.put("isHealth", checkedCategories.valueAt(6));
+                post.put("isOther", checkedCategories.valueAt(7));
+                post.put("votes", 0);
                 if(placeView.getCheckedItemCount() > 0) {
-//                    post.add("locations", placeView.getCheckedItemPositions().get)
+//                    post.put("locations", placeView.getCheckedItemPositions().get)
                     //TODO: how to handle location???
                 }
+                try {
+                    latch.await();
+                } catch(InterruptedException e) {
+                    Toast t2 = Toast.makeText(getApplicationContext(),
+                            "interruption Error!", Toast.LENGTH_SHORT);
+                    t2.show();
+                }
                 if(!urlTitle.isEmpty()) {
-                    post.add("title", urlTitle);
+                    post.put("title", urlTitle);
                 }
 
-                post.add("user", ParseUser.getCurrentUser().getUsername());
+                post.put("user", ParseUser.getCurrentUser().getUsername());
 
                 post.saveInBackground();
                 finish();
@@ -90,35 +105,26 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
 
 
     }
-//    private class MyTask extends AsyncTask<String, Void, String> {
-//        ProgressDialog prog;
-//        String title = "";
-//
-//        @Override
-//        protected void onPreExecute() {
-//            prog = new ProgressDialog(CreateContentActivity.this);
-//            prog.setMessage("Loading....");
-//            prog.show();
-//        }
-//        @Override
-//        protected String doInBackground(String... params) {
-//            try {
-//                Document doc = Jsoup.connect(params[0]).get(); //TODO: import jsoup
-//                title = doc.title();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//                //TODO: toast error, ask to fix url
-//            }
-//            return title;
-//        }
-//        @Override
-//        protected void onPostExecute(String result) {
-//            super.onPostExecute(result);
-//            prog.dismiss();
-//            urlTitle = result;
-//        }
-//
-//    }
+
+    private class MyTask extends AsyncTask<String, Void, String> {
+        String title = "";
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                Document doc = Jsoup.connect(params[0]).get();
+                title = doc.title();
+            } catch (IOException e) {
+                e.printStackTrace();
+                Toast t = Toast.makeText(getApplicationContext(),
+                        "Invalid URL, Please fix.", Toast.LENGTH_SHORT);
+                t.show();
+            }
+            urlTitle = title;
+            latch.countDown();
+            return title;
+        }
+    }
 
 
 }

@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.parse.ParseObject;
+
 import java.util.ArrayList;
 
 /**
@@ -41,7 +43,7 @@ public class MyCustomBaseAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.txtTitle = (TextView) convertView.findViewById(R.id.title);
             holder.txtDate = (TextView) convertView.findViewById(R.id.date);
-            //// TODO: 11/5/15 add up and down arrows 
+//            holder.txtUser = (TextView) convertView.findViewById(R.id.user);
             holder.buttonUpvote = (Button) convertView.findViewById(R.id.upvote);
             holder.buttonDownvote = (Button) convertView.findViewById(R.id.downvote);
 
@@ -50,9 +52,11 @@ public class MyCustomBaseAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-
-        holder.txtTitle.setText(searchArrayList.get(position).getTitle());
-        holder.txtDate.setText(searchArrayList.get(position).getDate());
+        ParseObject p = searchArrayList.get(position).getParseObject();
+        //TODO: format date to Day mm/dd/yy am/pm
+        holder.txtDate.setText(p.getCreatedAt().toString()+ " by " + p.getString("user"));
+        holder.txtTitle.setText(p.getString("title"));
+//        holder.txtUser.setText(p.getString("user"));
 
         return convertView;
     }
@@ -60,6 +64,7 @@ public class MyCustomBaseAdapter extends BaseAdapter {
     static class ViewHolder {
         TextView txtTitle;
         TextView txtDate;
+//        TextView txtUser;
         Button buttonUpvote;
         Button buttonDownvote;
 
