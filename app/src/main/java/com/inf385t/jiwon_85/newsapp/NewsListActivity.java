@@ -30,6 +30,7 @@ public class NewsListActivity extends ActionBarActivity {
     private ListView listView;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +60,6 @@ public class NewsListActivity extends ActionBarActivity {
 
 
 
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
@@ -67,8 +67,9 @@ public class NewsListActivity extends ActionBarActivity {
                 PostResults fullObject = (PostResults)o;
 //                Toast.makeText(ListViewBlogPost.this, "You have chosen: " + " " + fullObject.getName(), Toast.LENGTH_LONG).show();
                     int viewId = v.getId();
+                Toast.makeText(getApplicationContext(), "voted", Toast.LENGTH_SHORT).show();
                     if(viewId == R.id.upvote || viewId == R.id.downvote) {
-                        Toast.makeText(getApplicationContext(), "voted", Toast.LENGTH_SHORT).show();
+
                         ParseObject p = fullObject.getParseObject();
                         int increment = viewId == R.id.upvote ? 1 : -1;
                         p.increment("votes", increment);
@@ -77,6 +78,8 @@ public class NewsListActivity extends ActionBarActivity {
             }
         });
     }
+
+
 
 
     private void getSearchResults() {

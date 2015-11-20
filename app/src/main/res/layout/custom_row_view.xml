@@ -2,10 +2,13 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:stretchColumns="0">
+    android:stretchColumns="0"
+    android:focusable="false">
 
     <TableRow android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:clickable="false"
+        android:focusable="false">
 
         <TextView android:id="@+id/title"
             android:textSize="14sp"
@@ -13,7 +16,8 @@
             android:textColor="#285fc0"
             android:text="placeholder"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:focusable="false"/>
 
         <Button
             android:id="@+id/upvote"
@@ -25,16 +29,20 @@
             android:layout_weight="1"
             android:textAlignment="center"
             android:gravity="right"
-            android:maxWidth="15dp" />
+            android:maxWidth="15dp"
+            android:focusable="false"/>
     </TableRow>
 
 
     <TableRow android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:focusable="false">
+
         <TextView android:id="@+id/date"
             android:layout_width="wrap_content"
             android:text="placeholder"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:focusable="false"/>
         <!--
         <TextView android:id="@+id/user"
             android:layout_width="wrap_content"
@@ -51,7 +59,8 @@
             android:layout_weight="1"
             android:textAlignment="center"
             android:gravity="right"
-            android:maxWidth="15dp" />
+            android:maxWidth="15dp"
+            android:focusable="false" />
     </TableRow>
 
 

@@ -25,6 +25,7 @@ import java.util.concurrent.CountDownLatch;
 public class CreateContentActivity extends ActionBarActivity implements View.OnClickListener {
 
     private Button postButton;
+
     private EditText articleLinkText;
     private ListView categoryView;
     private ListView placeView;
