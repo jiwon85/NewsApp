@@ -2,32 +2,207 @@
 <items version="2" >
 
     <item
-        jar="/Users/jiwon_85/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.3.0/8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c/bolts-tasks-1.3.0.jar"
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="8a62fd16fcc1c06f284fc98e6cbded2a5af1dd4c">
-        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.3.0-a9eb2f382fcf26cdaaa18d69c59bd0afd68a8113.jar" />
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-ab62892263ccef0c5e3ee0655490265ed542ce3e.jar" />
     </item>
     <item
-        jar="/Users/jiwon_85/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.8.3/65fd012581ded67bc20945d85c32b4598c3a9cf1/jsoup-1.8.3.jar"
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.3.0/jars/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="65fd012581ded67bc20945d85c32b4598c3a9cf1">
-        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/jsoup-1.8.3-29a72a47613f750e09e8c55551ce916abdf138bf.jar" />
+        sha1="9aedc597d74c6d77258ce5236e9abff0c3cc65e3">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-ffc5ecf2e4c545d855ddf643e3f0f46f213313d6.jar" />
     </item>
     <item
-        jar="/Users/jiwon_85/.gradle/caches/modules-2/files-2.1/com.parse/parse-android/1.11.0/6592129dec2caa8791d322c7e4b6b7a30e8eadae/parse-android-1.11.0.jar"
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/8.3.0/jars/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="6592129dec2caa8791d322c7e4b6b7a30e8eadae">
-        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/parse-android-1.11.0-ced07f01ba41e55db9a358ed0fc4ab9290bf910e.jar" />
+        sha1="2c6fcd6267cbac6509a2e72a61127534a1d616cf">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-59facba4251eac4d2361a23e36875a0c0145a47c.jar" />
     </item>
     <item
-        jar="/Users/jiwon_85/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.3.0/bc535105332645408ef5f1380215cc954b842178/bolts-applinks-1.3.0.jar"
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.3.0/jars/classes.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="bc535105332645408ef5f1380215cc954b842178">
-        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.3.0-5fb62d6f53e7979623701102f9d2093ee1d8e6a2.jar" />
+        sha1="6d9ed9a288364688e7fcf6704776284dac1eb42e">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-de31959995ff88c1df09a1610389dca957baf5e7.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0c3e81d3eb86b86d194b5cdb6a4de78203f6f7fd">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-867402c39b4226e8d999dcfd03496b7a3795bac7.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="744c49c02a27569cc4cc049685d3649e4ef439f2">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-e1808c0cd63e0e5ba9c89ee40b09328a33d7f02d.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="77f9593d979f4347344be233bd0d888315f79517">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-a24b2bc5e2ff3d53b8ca986fef462e8ee356e793.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="ea34579b1be157cd792376362157e9c54ebb4cd7">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-8e889c9bc4d3988a949ce066b2238648f296434b.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="9c9bdb4b2497465a6cf7d5e8f57c5298f828a380">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-ab73f70381bd5e923f3b604cae354204f4a58388.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0af4f577b4a21eb9be2a7f52e33b077b67e6d9f8">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-ab5c7d0a133f79f2e0924eaf9d869a5ddd122e06.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-afeee85874a570643b2bf0ac9292d917bb26ce83.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="345a1b5cf5b144ce18ba6962bc66a7e2f26c1c1b">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-cd9bae7f3f09bb1ddb03d6cd4de43fc1078f623d.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="cb4af597d079ffdc0984a3ec2c03cbf6a1b9f869">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-0a36c5f84cc40130e24197dce06f14255e5b8312.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="eb576427887e497cd958a475475f9206e38dc314">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-729790a3fb4f5340a2a41419b38e08147781d737.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="71eda10e33212e44245524b5087366ff8d805825">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-03e9733a3a17b8a54c77e06957f58cbd9cf5c5fd.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="724ce977487ab3a215d4d2eb47d8dccd9f30013f">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-a6b96798d6047bcbed70ea7937aff1ca7af747d2.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-2750bd9c374ff97c6e4a50f41054f52b249fa269.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="fd76d95678a6b2b8a49bb8a9fb5bcef7aedb70e7">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-b496f3184a96888373468244528f0f0cee733f56.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-3c3f0a83efa3121819112f097a48d40fa482600a.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="697679619b00837e3d09e9988a2e1e2a9009d502">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-71ba489a4d8ae9d0fb609b20c5ad23ec441bf7f3.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-30315f852c2481f2eec9f0d993ca853130d98086.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="58adcfbe2c8393765e84c5489d01bba6a5159eb2">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-23648ef187c54a6adafa107257ff289fe54014ef.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-4696ab3c068b4c18d3bdd4febe95da37a10b9e00.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-97f42f565d356ceef2fab8117e63722cc3876f63.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="af6ee25641df3142059c0828517aa7ee6eba08d6">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-c2101d41b9027f4b01cbeb24ea3c0fa27174c878.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="b000ecceb9877fefcdc7ab1959ff03df91551656">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-68adf4ad4014a6aab55a5c17147f97d0e7c39d15.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="4b8df1b1e51fe14b0e89b3845dc2e215a024a09f">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-8fec0375a0b0248de1ae6a3b29470feb9444da43.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0a1897426566e408a5c20a3d931f77d89771d07f">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-0b885df42e23591bdad644adbe8d366ff93a291e.jar" />
+    </item>
+    <item
+        jar="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="27775d59b16610ac76f1b83693fedd9520396332">
+        <dex dex="/Users/jiwon_85/Desktop/NewsApp/app/build/intermediates/pre-dexed/debug/classes-991e6d092323e627117064206328af1e3cc5ed9f.jar" />
     </item>
 
 </items>

@@ -4,6 +4,9 @@
     <string name="title_activity_create_account">CreateAccountActivity</string>
     <string name="title_activity_news_list">NewsListActivity</string>
     <string name="title_activity_create_content">CreateContentActivity</string>
+    <string name="autocomplete_hint">Enter place name or address</string>
+    <string name="selected_place">Last Selected Place:</string>
+    <string name="clear_text">Clear</string>
 
     <string-array name="news_categories">
         <item>Politics</item>
