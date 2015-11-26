@@ -1,21 +1,14 @@
 package com.inf385t.jiwon_85.newsapp;
 
-
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.util.SparseBooleanArray;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -26,27 +19,12 @@ import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.PlaceBuffer;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.maps.model.LatLngBounds;
-import com.parse.Parse;
-import com.parse.ParseObject;
-import com.parse.ParseUser;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.CountDownLatch;
 
-public class CreateContentActivity extends ActionBarActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
+public class ResultFilterActivity extends ActionBarActivity implements GoogleApiClient.OnConnectionFailedListener {
 
-    private Button postButton;
-
-    private EditText articleLinkText;
-    private ListView categoryView;
-
-    private String urlTitle = "";
-    private CountDownLatch latch;
 
     protected GoogleApiClient mGoogleApiClient;
     private PlaceAutocompleteAdapter mAdapter;
@@ -61,37 +39,26 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
 
     private Boolean isCity = false;
 
-    private TextView placesText;
+    private CountDownLatch latch = new CountDownLatch(1);
 
-    private String placeholder;
-    private String placeholderId;
+    private Button businessButton;
+    private Button politicsButton;
+    private Button techButton;
+    private Button entertainmentButton;
+    private Button sportsButton;
+    private Button healthButton;
+    private Button scienceButton;
+    private Button otherButton;
 
-    private ArrayList<String> places;
-
+    private String cityName;
+    private String cityId;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_content);
+        setContentView(R.layout.activity_result_filter);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-        places = new ArrayList<>();
-        placeholder = "";
-        placeholderId = "";
-        placesText = (TextView) findViewById(R.id.placesText);
-        postButton = (Button) findViewById(R.id.postButton);
-        postButton.setOnClickListener(this);
-        articleLinkText = (EditText) findViewById(R.id.articleLinkText);
-
-        categoryView = (ListView) findViewById(R.id.categoryView);
-        categoryView.setAdapter(new ArrayAdapter<String>(this, R.layout.text_layout,
-                getResources().getStringArray(R.array.news_categories)));
-
-        categoryView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        categoryView.setItemsCanFocus(false);
-
-
-
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .enableAutoManage(this, 0 /* clientId */, this)
                 .addApi(Places.GEO_DATA_API)
@@ -118,84 +85,27 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
                 mAutocompleteView.setText("");
             }
         });
-    }
 
-    public void onClick(View v) {
-        if (v.getId() == R.id.postButton) {
-            if(articleLinkText.getText().length() == 0) {
-                Toast t = Toast.makeText(getApplicationContext(), "Please enter a link.",
-                        Toast.LENGTH_SHORT);
-                t.show();
-            } else if(categoryView.getCheckedItemCount() == 0) {
-                Toast t = Toast.makeText(getApplicationContext(),
-                        "Please select at least one category.", Toast.LENGTH_SHORT);
-                t.show();
-            } else {
-                SparseBooleanArray checkedCategories = categoryView.getCheckedItemPositions();
-                ParseObject post = new ParseObject("post");
-                String link = articleLinkText.getText().toString();
-//
+        politicsButton = (Button) findViewById(R.id.politicsButton);
+        politicsButton.setOnClickListener(onClickListener);
+        businessButton = (Button) findViewById(R.id.businessButton);
+        businessButton.setOnClickListener(onClickListener);
+        techButton = (Button) findViewById(R.id.techButton);
+        techButton.setOnClickListener(onClickListener);
+        healthButton = (Button) findViewById(R.id.healthButton);
+        healthButton.setOnClickListener(onClickListener);
+        entertainmentButton = (Button) findViewById(R.id.entertainmentButton);
+        entertainmentButton.setOnClickListener(onClickListener);
+        scienceButton = (Button) findViewById(R.id.scienceButton);
+        scienceButton.setOnClickListener(onClickListener);
+        sportsButton = (Button) findViewById(R.id.sportsButton);
+        sportsButton.setOnClickListener(onClickListener);
+        otherButton = (Button) findViewById(R.id.otherButton);
+        otherButton.setOnClickListener(onClickListener);
 
-                new MyTask().execute(link);
-                post.put("link", link);
-                //Politics, Business, Tech, Entertainment, Sports, Science, Health, Other
+        cityName = "";
+        cityId = "";
 
-                post.put("isPolitics", checkedCategories.get(0));
-                post.put("isBusiness", checkedCategories.get(1));
-                post.put("isTech", checkedCategories.get(2));
-                post.put("isEntertainment", checkedCategories.get(3));
-                post.put("isSports", checkedCategories.get(4));
-                post.put("isScience", checkedCategories.get(5));
-                post.put("isHealth", checkedCategories.get(6));
-                post.put("isOther", checkedCategories.get(7));
-                post.put("votes", 0);
-
-                if(places.size() > 0) {
-                    for(String s: places)
-                        post.add("locations", s);
-                }
-                latch = new CountDownLatch(1);
-                try {
-                    latch.await();
-                } catch(InterruptedException e) {
-                    Toast t2 = Toast.makeText(getApplicationContext(),
-                            "interruption Error!", Toast.LENGTH_SHORT);
-                    t2.show();
-                }
-                if(!urlTitle.isEmpty()) {
-                    post.put("title", urlTitle);
-                }
-
-                post.put("user", ParseUser.getCurrentUser().getUsername());
-
-                post.saveInBackground();
-                finish();
-
-
-            }
-        }
-
-
-    }
-
-    private class MyTask extends AsyncTask<String, Void, String> {
-        String title = "";
-
-        @Override
-        protected String doInBackground(String... params) {
-            try {
-                Document doc = Jsoup.connect(params[0]).get();
-                title = doc.title();
-            } catch (IOException e) {
-                e.printStackTrace();
-                Toast t = Toast.makeText(getApplicationContext(),
-                        "Invalid URL, Please fix.", Toast.LENGTH_SHORT);
-                t.show();
-            }
-            urlTitle = title;
-            latch.countDown();
-            return title;
-        }
     }
 
     @Override
@@ -248,19 +158,19 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
                         //is a city
                         isCity = true;
                         Log.i(TAG, "isCity is TRUE");
-//                        cityName = place.getName().toString();
-                        placeholderId = place.getId();
-                        placeholder = place.getName().toString();
+                        cityName = place.getName().toString();
+                        cityId = place.getId();
+
+
                     } else {
-                        placeholder = "";
-                        placeholderId = "";
+                        cityName = "";
+                        cityId = "";
                     }
                     latch.countDown();
                     places.release();
 
                 }
             });
-            latch = new CountDownLatch(1);
             thread.start();
             try {
                 latch.await();
@@ -268,12 +178,18 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
                 Toast.makeText(getApplicationContext(),
                         "interruption Error!", Toast.LENGTH_SHORT).show();
             }
+            latch = new CountDownLatch(1);
             Toast.makeText(getApplicationContext(), "Clicked: " + primaryText + " " + isCity,
                     Toast.LENGTH_SHORT).show();
             Log.i(TAG, "Called getPlaceById to get Place details for " + placeId);
-            if(isCity && !placeholderId.isEmpty()) {
-                places.add(placeholderId);
-                placesText.setText(placesText.getText().toString() + "\n" + placeholder);
+            if(isCity && !cityId.isEmpty()) {
+                //TODO: find geotagged results
+                Intent i = new Intent(getApplicationContext(), NewsListActivity.class);
+                i.putExtra("city", cityId);
+                i.putExtra("cityName", cityName);
+                startActivity(i);
+
+
             } else {
                 mAutocompleteView.setText("");
                 Toast.makeText(getApplicationContext(),
@@ -282,5 +198,42 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
         }
     };
 
+    private View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String category = "";
+            switch(v.getId()) {
+                case R.id.businessButton:
+                    category = "isBusiness";
+                    break;
+                case R.id.politicsButton:
+                    category = "isCategory";
+                    break;
+                case R.id.techButton:
+                    category = "isTech";
+                    break;
+                case R.id.sportsButton:
+                    category = "isSports";
+                    break;
+                case R.id.scienceButton:
+                    category = "isScience";
+                    break;
+                case R.id.healthButton:
+                    category = "isHealth";
+                    break;
+                case R.id.entertainmentButton:
+                    category = "isEntertainment";
+                    break;
+                case R.id.otherButton:
+                    category = "isOther";
+                    break;
+            }
+            if(!category.isEmpty()) {
+                Intent i = new Intent(getApplicationContext(), NewsListActivity.class);
+                i.putExtra("category", category);
+                startActivity(i);
+            }
+        }
+    };
 
 }

@@ -62,7 +62,7 @@ public class MyCustomBaseAdapter extends BaseAdapter {
                     int position = (int) v.getTag();
                     PostResults result = searchArrayList.get(position);
                     int viewId = v.getId();
-                    //        Toast.makeText(getApplicationContext(), "voted", Toast.LENGTH_SHORT).show();
+                    //TODO: prevent people from upvoting and downvoting multiple times
                     if (viewId == R.id.upvote || viewId == R.id.downvote) {
                         Log.d("Votes", "voted");
                         ParseObject p = result.getParseObject();

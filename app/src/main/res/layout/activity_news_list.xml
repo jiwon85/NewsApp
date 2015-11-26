@@ -8,27 +8,6 @@
     tools:context="com.inf385t.jiwon_85.newsapp.NewsListActivity">
 
 
-    <AutoCompleteTextView
-        android:id="@+id/autocomplete_places"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:hint="@string/autocomplete_hint"
-        android:singleLine="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/button_clear"
-        android:layout_toLeftOf="@+id/button_clear"
-        android:layout_toStartOf="@+id/button_clear" />
-    <Button
-        android:id="@+id/button_clear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/clear_text"
-        android:layout_below="@+id/plusButton"
-        android:layout_alignRight="@+id/listView"
-        android:layout_alignEnd="@+id/listView"
-        android:layout_marginTop="25dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -46,7 +25,9 @@
         android:id="@+id/listView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/autocomplete_places" />
+        android:layout_below="@+id/titleText"
+        android:layout_above="@+id/filterButton"
+        android:layout_marginTop="5dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -87,8 +68,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="All News"
-        android:id="@+id/textView"
+        android:id="@+id/titleText"
         android:layout_below="@+id/recentToggle"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter Results"
+        android:id="@+id/filterButton"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

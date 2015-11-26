@@ -19,4 +19,5 @@
         <item>Other</item>
     </string-array>
     <string name="title_activity_custom_list_view">CustomListV</string>
+    <string name="title_activity_result_filter">ResultFilterActivity</string>
 </resources>
