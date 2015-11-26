@@ -41,6 +41,10 @@
             android:name=".ResultFilterActivity"
             android:label="@string/title_activity_result_filter" >
         </activity>
+        <activity
+            android:name=".BrowserActivity"
+            android:label="@string/title_activity_browser" >
+        </activity>
     </application>
 
 </manifest>

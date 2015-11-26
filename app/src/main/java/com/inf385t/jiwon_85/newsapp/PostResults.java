@@ -1,6 +1,5 @@
 package com.inf385t.jiwon_85.newsapp;
 
-import com.parse.Parse;
 import com.parse.ParseObject;
 
 /**

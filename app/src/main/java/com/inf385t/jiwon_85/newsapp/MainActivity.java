@@ -13,10 +13,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.parse.LogInCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
-import com.parse.SignUpCallback;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener{
 
@@ -97,7 +95,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                         passwordText.getText().toString(), new LogInCallback() {
                     public void done(ParseUser user, ParseException e) {
                         if (user != null) {
-                            Toast t = Toast.makeText(getApplicationContext(), "success!", Toast.LENGTH_SHORT);
+                            Toast t = Toast.makeText(getApplicationContext(), "Success!", Toast.LENGTH_SHORT);
                             t.show();
                             Intent i = new Intent(getApplicationContext(), NewsListActivity.class);
                             startActivity(i);

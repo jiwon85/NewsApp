@@ -9,6 +9,12 @@
 
 
 
+    <Space android:id="@+id/dummy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
@@ -31,38 +37,33 @@
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="r?"
+        android:text="Home"
         android:id="@+id/refreshButton"
         android:layout_alignBaseline="@+id/plusButton"
-        android:layout_alignBottom="@+id/plusButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <ToggleButton
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="Recent"
         android:id="@+id/recentToggle"
-        android:layout_alignTop="@+id/popularToggle"
-        android:layout_toRightOf="@+id/popularToggle"
-        android:layout_toEndOf="@+id/popularToggle"
         android:textOn="Recent"
-        android:textOff="Recent" />
+        android:textOff="Recent"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/dummy" />
 
     <ToggleButton
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="Popular"
         android:id="@+id/popularToggle"
         android:textOff="Popular"
         android:textOn="Popular"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/refreshButton"
-        android:layout_toEndOf="@+id/refreshButton"
-        android:layout_marginLeft="88dp"
-        android:layout_marginStart="88dp" />
+        android:layout_toLeftOf="@+id/dummy" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,5 +81,14 @@
         android:id="@+id/filterButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:id="@+id/logoutButton"
+        android:layout_alignBottom="@+id/filterButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

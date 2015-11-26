@@ -176,7 +176,7 @@ public class ResultFilterActivity extends ActionBarActivity implements GoogleApi
                 latch.await();
             } catch(InterruptedException e) {
                 Toast.makeText(getApplicationContext(),
-                        "interruption Error!", Toast.LENGTH_SHORT).show();
+                        "Interruption Error!", Toast.LENGTH_SHORT).show();
             }
             latch = new CountDownLatch(1);
             Toast.makeText(getApplicationContext(), "Clicked: " + primaryText + " " + isCity,

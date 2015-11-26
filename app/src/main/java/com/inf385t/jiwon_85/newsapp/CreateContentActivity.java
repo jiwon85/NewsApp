@@ -1,7 +1,5 @@
 package com.inf385t.jiwon_85.newsapp;
 
-
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -26,7 +24,6 @@ import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.PlaceBuffer;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.maps.model.LatLngBounds;
-import com.parse.Parse;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
@@ -159,7 +156,7 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
                     latch.await();
                 } catch(InterruptedException e) {
                     Toast t2 = Toast.makeText(getApplicationContext(),
-                            "interruption Error!", Toast.LENGTH_SHORT);
+                            "Interruption Error!", Toast.LENGTH_SHORT);
                     t2.show();
                 }
                 if(!urlTitle.isEmpty()) {
@@ -266,7 +263,7 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
                 latch.await();
             } catch(InterruptedException e) {
                 Toast.makeText(getApplicationContext(),
-                        "interruption Error!", Toast.LENGTH_SHORT).show();
+                        "Interruption Error!", Toast.LENGTH_SHORT).show();
             }
             Toast.makeText(getApplicationContext(), "Clicked: " + primaryText + " " + isCity,
                     Toast.LENGTH_SHORT).show();

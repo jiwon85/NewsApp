@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.parse.ParseException;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
@@ -85,7 +84,7 @@ public class CreateAccountActivity extends ActionBarActivity implements View.OnC
                 public void done(ParseException e) {
                     if (e == null) {
                         // Hooray! Let them use the app now.
-                        Toast t = Toast.makeText(getApplicationContext(), "success!", Toast.LENGTH_SHORT);
+                        Toast t = Toast.makeText(getApplicationContext(), "Success!", Toast.LENGTH_SHORT);
                         t.show();
                         Intent i = new Intent(getApplicationContext(), NewsListActivity.class);
                         startActivity(i);
