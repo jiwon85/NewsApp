@@ -1,5 +1,6 @@
 package com.inf385t.jiwon_85.newsapp;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -265,17 +267,20 @@ public class CreateContentActivity extends ActionBarActivity implements View.OnC
                 Toast.makeText(getApplicationContext(),
                         "Interruption Error!", Toast.LENGTH_SHORT).show();
             }
-            Toast.makeText(getApplicationContext(), "Clicked: " + primaryText + " " + isCity,
-                    Toast.LENGTH_SHORT).show();
+
             Log.i(TAG, "Called getPlaceById to get Place details for " + placeId);
             if(isCity && !placeholderId.isEmpty()) {
                 places.add(placeholderId);
                 placesText.setText(placesText.getText().toString() + "\n" + placeholder);
+                InputMethodManager inputManager = (InputMethodManager)
+                        getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputManager.toggleSoftInput(0, 0);
+
             } else {
-                mAutocompleteView.setText("");
                 Toast.makeText(getApplicationContext(),
                         "Error: Selection not a city.", Toast.LENGTH_SHORT).show();
             }
+            mAutocompleteView.setText("");
         }
     };
 

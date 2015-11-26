@@ -179,8 +179,6 @@ public class ResultFilterActivity extends ActionBarActivity implements GoogleApi
                         "Interruption Error!", Toast.LENGTH_SHORT).show();
             }
             latch = new CountDownLatch(1);
-            Toast.makeText(getApplicationContext(), "Clicked: " + primaryText + " " + isCity,
-                    Toast.LENGTH_SHORT).show();
             Log.i(TAG, "Called getPlaceById to get Place details for " + placeId);
             if(isCity && !cityId.isEmpty()) {
                 //TODO: find geotagged results
