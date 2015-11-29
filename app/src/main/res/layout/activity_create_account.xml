@@ -17,7 +17,9 @@
         android:hint="Username"
         android:width="320dp"
         android:textAlignment="center"
-        android:inputType="textEmailSubject" />
+        android:inputType="textEmailSubject"
+        android:textColorHint="#FF2B8DA3"
+        android:textColor="#FF2B8DA3" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -31,7 +33,9 @@
         android:layout_marginTop="30dp"
         android:layout_below="@+id/createUsernameText"
         android:layout_alignStart="@id/createUsernameText"
-        android:layout_alignLeft="@id/createUsernameText"/>
+        android:layout_alignLeft="@id/createUsernameText"
+        android:textColor="#FF2B8DA3"
+        android:textColorHint="#FF2B8DA3" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -45,7 +49,9 @@
         android:layout_marginTop="30dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/confirmPasswordText" />
+        android:layout_below="@+id/confirmPasswordText"
+        android:textColor="#FF2B8DA3"
+        android:textColorHint="#FF2B8DA3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -63,7 +69,8 @@
         android:id="@+id/createButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp" />
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#FF2B8DA3" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -76,6 +83,8 @@
         android:width="320dp"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/createPasswordText"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColorHint="#FF2B8DA3"
+        android:textColor="#FF2B8DA3" />
 
 </RelativeLayout>

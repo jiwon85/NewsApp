@@ -21,7 +21,9 @@
         android:layout_alignBottom="@+id/button_clear"
         android:layout_toLeftOf="@+id/button_clear"
         android:layout_toStartOf="@+id/button_clear"
-        android:inputType="textEmailSubject" />
+        android:inputType="textEmailSubject"
+        android:textColorHint="#FF2B8DA3"
+        android:textColor="#FF2B8DA3" />
 
     <Button
         android:id="@+id/button_clear"
@@ -31,7 +33,8 @@
         android:layout_marginTop="123dp"
         android:layout_below="@+id/otherButton"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#FF2B8DA3" />
 
     <Button
         android:layout_width="fill_parent"
@@ -40,7 +43,8 @@
         android:id="@+id/politicsButton"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="47dp" />
+        android:layout_marginTop="47dp"
+        android:backgroundTint="#FF2B8DA3" />
 
     <Button
         android:layout_width="fill_parent"
@@ -48,7 +52,8 @@
         android:text="Business"
         android:id="@+id/businessButton"
         android:layout_below="@+id/politicsButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FF2B8DA3" />
 
     <Button
         android:layout_width="fill_parent"
@@ -56,7 +61,8 @@
         android:text="Tech"
         android:id="@+id/techButton"
         android:layout_below="@+id/businessButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FF2B8DA3" />
 
     <Button
         android:layout_width="fill_parent"
@@ -64,7 +70,8 @@
         android:text="Entertainment"
         android:id="@+id/entertainmentButton"
         android:layout_below="@+id/techButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FF2B8DA3" />
 
     <Button
         android:layout_width="fill_parent"
@@ -72,7 +79,8 @@
         android:text="Sports"
         android:id="@+id/sportsButton"
         android:layout_below="@+id/entertainmentButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FF2B8DA3" />
 
     <Button
         android:layout_width="fill_parent"
@@ -80,7 +88,8 @@
         android:text="Science"
         android:id="@+id/scienceButton"
         android:layout_below="@+id/sportsButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FF2B8DA3" />
 
     <Button
         android:layout_width="fill_parent"
@@ -88,7 +97,8 @@
         android:text="Health"
         android:id="@+id/healthButton"
         android:layout_below="@+id/scienceButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FF2B8DA3" />
 
     <Button
         android:layout_width="fill_parent"
@@ -96,7 +106,8 @@
         android:text="Other"
         android:id="@+id/otherButton"
         android:layout_below="@+id/healthButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FF2B8DA3" />
 
     <TextView
         android:layout_width="wrap_content"

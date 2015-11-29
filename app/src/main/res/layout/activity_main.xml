@@ -17,7 +17,9 @@
         android:layout_alignLeft="@+id/passwordText"
         android:layout_alignStart="@+id/passwordText"
         android:layout_marginBottom="63dp"
-        android:inputType="textEmailSubject" />
+        android:inputType="textEmailSubject"
+        android:textColor="#FF2B8DA3"
+        android:textColorHint="#FF2B8DA3" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -29,7 +31,9 @@
         android:textAlignment="center"
         android:width="320dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#FF2B8DA3"
+        android:textColorHint="#FF2B8DA3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,7 +43,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="51dp"
-        android:textSize="@dimen/abc_text_size_large_material" />
+        android:textSize="@dimen/abc_text_size_large_material"
+        android:textColor="#FF2B8DA3" />
 
     <Button
         android:layout_width="wrap_content"
@@ -49,7 +54,9 @@
         android:width="240dp"
         android:layout_above="@+id/createAccountButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="51dp" />
+        android:layout_marginBottom="51dp"
+        android:textColorHint="#FF2B8DA3"
+        android:backgroundTint="#FF2B8DA3" />
 
     <Button
         android:layout_width="wrap_content"
@@ -60,6 +67,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/loginButton"
         android:layout_alignLeft="@+id/loginButton"
-        android:layout_marginBottom="56dp" />
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="#FF2B8DA3" />
 
 </RelativeLayout>

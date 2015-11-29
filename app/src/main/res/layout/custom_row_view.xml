@@ -13,7 +13,7 @@
         <TextView android:id="@+id/title"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:textColor="#285fc0"
+            android:textColor="#FF2B8DA3"
             android:text="placeholder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,21 +22,22 @@
         <Button
             android:id="@+id/upvote"
             android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:text="u"
+            android:layout_height="20dp"
             android:textSize="10dp"
             android:layout_gravity="right"
             android:layout_weight="1"
             android:textAlignment="center"
             android:gravity="right"
             android:maxWidth="15dp"
-            android:focusable="false"/>
+            android:focusable="false"
+            android:background="@drawable/up" />
     </TableRow>
 
 
     <TableRow android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:focusable="false">
+        android:focusable="false"
+        android:paddingTop="5dp">
 
         <TextView android:id="@+id/date"
             android:layout_width="wrap_content"
@@ -52,15 +53,15 @@
         <Button
             android:id="@+id/downvote"
             android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:text="d"
+            android:layout_height="20dp"
             android:textSize="10dp"
             android:layout_gravity="right"
             android:layout_weight="1"
             android:textAlignment="center"
             android:gravity="right"
             android:maxWidth="15dp"
-            android:focusable="false" />
+            android:focusable="false"
+            android:background="@drawable/down" />
     </TableRow>
 
 

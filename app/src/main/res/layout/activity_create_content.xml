@@ -20,7 +20,9 @@
         android:hint="Link to Article"
         android:textAlignment="center"
         android:imeOptions="actionDone"
-        android:inputType="textUri" />
+        android:inputType="textUri"
+        android:textColorHint="#FF2B8DA3"
+        android:textColor="#FF2B8DA3" />
 
     <ListView
         android:layout_width="wrap_content"
@@ -72,7 +74,9 @@
         android:layout_alignBottom="@+id/button_clear"
         android:layout_toLeftOf="@+id/button_clear"
         android:layout_toStartOf="@+id/button_clear"
-        android:inputType="textEmailSubject" />
+        android:inputType="textEmailSubject"
+        android:textColor="#FF2B8DA3"
+        android:textColorHint="#FF2B8DA3" />
 
     <Button
         android:id="@+id/button_clear"
@@ -81,7 +85,8 @@
         android:text="@string/clear_text"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/locationLabel" />
+        android:layout_below="@+id/locationLabel"
+        android:backgroundTint="#FF2B8DA3" />
 
     <TextView
         android:layout_width="wrap_content"
