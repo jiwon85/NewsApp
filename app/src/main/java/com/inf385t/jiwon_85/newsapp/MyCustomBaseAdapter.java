@@ -1,6 +1,7 @@
 package com.inf385t.jiwon_85.newsapp;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,10 @@ import android.widget.TextView;
 
 import com.parse.ParseObject;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by jiwon_85 on 11/5/15.
@@ -69,6 +73,11 @@ public class MyCustomBaseAdapter extends BaseAdapter {
                         p.increment("votes", increment);
                         p.saveInBackground();
                     }
+                    if(viewId == R.id.upvote) {
+                        v.setBackgroundResource(R.drawable.upvoted);
+                    } else if(viewId == R.id.downvote) {
+                        v.setBackgroundResource(R.drawable.downvoted);
+                    }
 
 
                 }
@@ -81,8 +90,17 @@ public class MyCustomBaseAdapter extends BaseAdapter {
         }
         ParseObject p = searchArrayList.get(position).getParseObject();
         //TODO: format date to Day mm/dd/yy am/pm
-        holder.txtDate.setText(p.getCreatedAt().toString()+ " by " + p.getString("user"));
-        holder.txtTitle.setText(p.getString("title"));
+        Date date = new Date(p.getCreatedAt().getTime());
+        SimpleDateFormat formatter = new SimpleDateFormat("MMM d, h:mm a");
+        String dateToStr = formatter.format(date);
+        holder.txtDate.setText(dateToStr + " by " + p.getString("user"));
+//        holder.txtDate.setText(p.getCreatedAt()..toString()+ " by " + p.getString("user"));
+        String title = p.getString("title");
+        if(title.length() > 40) {
+            holder.txtTitle.setText(p.getString("title").substring(0, 40) + "...");
+        } else {
+            holder.txtTitle.setText(title);
+        }
 //        holder.txtUser.setText(p.getString("user"));
 
         return convertView;

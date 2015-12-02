@@ -30,15 +30,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/clear_text"
-        android:layout_marginTop="123dp"
-        android:layout_below="@+id/otherButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:backgroundTint="#FF2B8DA3" />
+        android:backgroundTint="#FF2B8DA3"
+        android:layout_below="@+id/cityView"
+        android:layout_alignRight="@+id/otherButton"
+        android:layout_alignEnd="@+id/otherButton" />
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="Politics"
         android:id="@+id/politicsButton"
         android:layout_alignParentTop="true"
@@ -48,7 +47,7 @@
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="Business"
         android:id="@+id/businessButton"
         android:layout_below="@+id/politicsButton"
@@ -57,7 +56,7 @@
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="Tech"
         android:id="@+id/techButton"
         android:layout_below="@+id/businessButton"
@@ -66,7 +65,7 @@
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="Entertainment"
         android:id="@+id/entertainmentButton"
         android:layout_below="@+id/techButton"
@@ -75,7 +74,7 @@
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="Sports"
         android:id="@+id/sportsButton"
         android:layout_below="@+id/entertainmentButton"
@@ -84,7 +83,7 @@
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="Science"
         android:id="@+id/scienceButton"
         android:layout_below="@+id/sportsButton"
@@ -93,7 +92,7 @@
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="Health"
         android:id="@+id/healthButton"
         android:layout_below="@+id/scienceButton"
@@ -102,7 +101,7 @@
 
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="Other"
         android:id="@+id/otherButton"
         android:layout_below="@+id/healthButton"
@@ -114,9 +113,9 @@
         android:layout_height="wrap_content"
         android:text="By City"
         android:id="@+id/cityView"
-        android:layout_above="@+id/autocomplete_places"
+        android:layout_below="@+id/otherButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="18dp" />
+        android:layout_marginTop="31dp" />
 
     <TextView
         android:layout_width="wrap_content"

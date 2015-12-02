@@ -205,7 +205,7 @@ public class ResultFilterActivity extends ActionBarActivity implements GoogleApi
                     category = "isBusiness";
                     break;
                 case R.id.politicsButton:
-                    category = "isCategory";
+                    category = "isPolitics";
                     break;
                 case R.id.techButton:
                     category = "isTech";

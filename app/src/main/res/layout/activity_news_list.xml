@@ -38,7 +38,7 @@
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home"
         android:id="@+id/refreshButton"
@@ -48,7 +48,7 @@
         android:backgroundTint="#FF2B8DA3" />
 
     <ToggleButton
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="Recent"
         android:id="@+id/recentToggle"
@@ -56,10 +56,11 @@
         android:textOff="Recent"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/dummy"
-        android:backgroundTint="#FF2B8DA3" />
+        android:backgroundTint="#FF2B8DA3"
+        android:textSize="10dp" />
 
     <ToggleButton
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="Popular"
         android:id="@+id/popularToggle"
@@ -67,7 +68,8 @@
         android:textOn="Popular"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/dummy"
-        android:backgroundTint="#FF2B8DA3" />
+        android:backgroundTint="#FF2B8DA3"
+        android:textSize="10dp" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -179,7 +179,7 @@ public class NewsListActivity extends ActionBarActivity{
                 recentToggle.setChecked(false);
                 popularToggle.setClickable(false);
             } else {
-                sortBy = "createAt";
+                sortBy = "createdAt";
                 popularToggle.setClickable(true);
                 popularToggle.setChecked(false);
                 recentToggle.setClickable(false);
